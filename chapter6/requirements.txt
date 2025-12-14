@@ -1,0 +1,12 @@
+# Chapter 6: PEFT and LoRA Dependencies
+# Install with: pip install -r requirements.txt
+# Python version >= 3.9
+
+# Core ML frameworks
+torch==2.5.1
+transformers==4.46.3
+datasets==3.1.0
+
+# PEFT and fine-tuning tools
+peft==0.13.2
+trl==0.12.2
