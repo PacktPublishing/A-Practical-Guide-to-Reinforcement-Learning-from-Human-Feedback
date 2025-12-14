@@ -1,0 +1,4 @@
+# Chapter 11 Dependencies
+# Install with: pip install -r requirements.txt
+# Python version >= 3.9
+

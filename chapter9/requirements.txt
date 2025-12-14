@@ -1,0 +1,6 @@
+# Chapter 9 Dependencies
+# Install with: pip install -r requirements.txt
+# Python version >= 3.9
+
+torch==2.6.0
+transformers==4.50.0

@@ -1,0 +1,9 @@
+# Chapter 10 Dependencies
+# Install with: pip install -r requirements.txt
+# Python version >= 3.9
+
+accelerate==1.7.0
+bitsandbytes==0.45.5
+peft==0.15.2
+transformers==4.51.3
+trl==0.17.0

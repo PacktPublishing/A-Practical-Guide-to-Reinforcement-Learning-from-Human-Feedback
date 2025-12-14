@@ -1,0 +1,9 @@
+# Chapter 8 Dependencies
+# Install with: pip install -r requirements.txt
+# Python version >= 3.9
+
+datasets==3.4.1
+peft==0.14.0
+torch==2.6.0
+transformers==4.49.0
+trl==0.10.1
