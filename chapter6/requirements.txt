@@ -3,7 +3,7 @@
 # Python version >= 3.9
 
 # Core ML frameworks
-torch==2.5.1
+torch==2.8.0
 transformers==4.46.3
 datasets==3.1.0
 
