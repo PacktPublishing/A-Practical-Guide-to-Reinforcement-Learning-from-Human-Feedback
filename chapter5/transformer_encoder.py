@@ -72,6 +72,27 @@ class TransformerEncoderLayer(nn.Module):
         ffn_output = self.ffn(out1)
         return self.layernorm2(out1 + self.dropout2(ffn_output))  # Residual connection
 
+class TransformerEncoder(nn.Module):
+    def __init__(self, d_model, num_heads, d_ff, num_layers, dropout_rate=0.1):
+        super(TransformerEncoder, self).__init__()
+
+        self.positional_encoding = PositionalEncoding(d_model, dropout_rate)
+
+        self.enc_layers = nn.ModuleList(
+            [
+                TransformerEncoderLayer(d_model, num_heads, d_ff, dropout_rate)
+                for _ in range(num_layers)
+            ]
+        )
+
+    def forward(self, x, mask=None):
+
+        x = self.positional_encoding(x)
+
+        for layer in self.enc_layers:
+            x = layer(x, mask)
+
+        return x
 def test_transformer_components():
     # Testing positional encoding
     pos_encoding = PositionalEncoding(d_model=64)
