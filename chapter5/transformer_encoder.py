@@ -110,6 +110,11 @@ def test_transformer_components():
     encoder_output = enc_layer(sample_input, None)
     assert encoder_output.shape == sample_input.shape, "Encoder layer test failed!"
 
+    # Testing full Transformer encoder
+    encoder = TransformerEncoder(d_model=64, num_heads=8, d_ff=256, num_layers=2)
+    encoder_output = encoder(sample_input)
+    assert encoder_output.shape == sample_input.shape, "TransformerEncoder test failed!"
+
     print("All tests passed!")
 
 # Run the test
