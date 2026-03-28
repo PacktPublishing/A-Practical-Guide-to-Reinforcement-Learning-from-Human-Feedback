@@ -4,7 +4,7 @@
 
 # Core ML frameworks
 torch==2.5.1
-transformers==4.46.3
+transformers==4.53.0
 datasets==3.1.0
 
 # PEFT and fine-tuning tools
